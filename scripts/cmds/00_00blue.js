@@ -23,7 +23,7 @@ module.exports = {
 			return api.sendMessage("Please Provide your question with blue 🔵", event.threadID, event.messageID);
 		}
 
-		api.sendMessage("Blue AI is typing...", event.threadID, event.messageID);
+		api.sendMessage("Answer Please wait Blue is typing....", event.threadID, event.messageID);
 
 		const apiUrl = `https://bluerepoapislasttry.onrender.com/hercai?content=${content}`;
 

@@ -33,7 +33,7 @@ module.exports = {
 
 		if (input.length < 2) {
 			const responses = [
-				"uy bes bakit miss munanaman ako? 😏",
+				"Hi whats up? 😏",
 				"nandito lang ako para sa'yo, bes. 😊",
 				"may kailangan ka ba, bes? 😁",
 				"kumusta araw mo, bes? 😄",

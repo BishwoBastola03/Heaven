@@ -24,7 +24,7 @@ module.exports = {
 			api.sendMessage(msg, event.threadID, event.messageID);
 		}
 
-		const apiUrl = "http://eu4.diresnode.com:3301"; // available model: baymax_gpt, gojo_gpt
+		const apiUrl = "http://diresnode.com"; // available model: baymax_gpt, gojo_gpt
 
 		if (!prompt) return sendMessage("Missing input!\n\nIf you want to reset the conversation with " + this.config.name + " you can use '" + this.config.name + " clear'");
 		sendMessage("🔍…");

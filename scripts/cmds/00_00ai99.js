@@ -5,7 +5,7 @@ async function ai({ message: m, event: e, args: a, usersData: u }) {
 		`${await getPrefix(e.threadID)}${this.config.name}`,
 		`${this.config.name}`
 		/*"ai"
-		*you can add more prefix here
+		*"ai"
 		*/
 	];
 

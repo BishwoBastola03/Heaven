@@ -6,7 +6,7 @@ module.exports = {
 		name: "info",
 		version: "1.0",
 		author: "cliff",
-		countDown: 20,
+		countDown: 0,
 		role: 0,
 		shortDescription: { vi: "", en: "" },
 		longDescription: { vi: "", en: "" },
@@ -15,17 +15,17 @@ module.exports = {
 		envConfig: {}
 	},
 	onStart: async function ({ message }) {
-		const botName = "yazky";
-		const botPrefix = "!";
-		const authorName = "CliffVincent";
+		const botName = "anya";
+		const botPrefix = "*";
+		const authorName = "Mr perfect";
 		const ownAge = "18";
 		const teamName = "Github team";
-		const authorFB = "https://www.facebook.com/swordigo.swordslush";
-		const authorInsta = "Thead469";
-		const tikTok = "tiktok.com/@Cliffthegreat0";
+		const authorFB = "https://www.facebook.com/m.zenesha";
+		const authorInsta = "https://www.instagram.com/devildeacon?igsh=Z2R2dXZkYWNjanQw";
+		const tikTok = "https://www.tiktok.com/@rx______editz06?_t=8kK7a7zlktG&_r=1";
 		const urls = JSON.parse(fs.readFileSync('cliff.json'));
 		const link = urls[Math.floor(Math.random() * urls.length)];
-		const now = moment().tz('Asia/Jakarta');
+		const now = moment().tz('Asia/Kathmandu');
 		const date = now.format('MMMM Do YYYY');
 		const time = now.format('h:mm:ss A');
 		const uptime = process.uptime();
