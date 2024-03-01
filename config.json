@@ -25,11 +25,11 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "OWNER": "Yukinori ʚĭɞ",
+  "OWNER": "Mr perfect",
   "AGE": "18",
   "GENDER": "MALE",
   "nickNameBot": "AnYa",
-  "FACEBOOK": "https://www.facebook.com/yukinori.69",
+  "FACEBOOK": "https://www.facebook.com/m.zenesha",
   "prefix": "+",
   "database": {
     "type": "sqlite",
