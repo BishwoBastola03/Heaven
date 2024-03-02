@@ -4,21 +4,21 @@ module.exports = {
   config: {
     name: "v2a",
     aliases: ["video2audio"],
-    description: "Convert Video to audio ",
+    description: "Play rock paper scissors game with the bot",
     version: "1.2",
-    author: "arfan",
+    author: "milan",
     countDown: 60,
    longDescription: {
-      vi: "tạo avatar anime",
-      en: "Reply to a video"
+			vi: "tạo avatar anime",
+			en: "Reply to a video"
      },
     //shortDescription: "Create FB Banner",
-
+    
     category: "image",
     guide: {
       en: "{p}{n}"
     }
-
+  
   },
   onStart: async function ({ api, event, args, message }) {
     try {

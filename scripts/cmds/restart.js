@@ -5,7 +5,7 @@ module.exports = {
 		name: "restart",
 		version: "1.0",
 		author: "NTKhang",
-		countDown: 0,
+		countDown: 5,
 		role: 2,
 		shortDescription: {
 			vi: "Khởi động lại bot",

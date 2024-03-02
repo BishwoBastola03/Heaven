@@ -1,6 +1,7 @@
 module.exports = {
   config: {
     name: "topexp",
+    aliases: ['ranktop'],
     version: "1.0",
     author: "OTINXSANDIP",
     role: 0,

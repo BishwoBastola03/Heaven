@@ -1,12 +1,10 @@
 const axios = require('axios');
-const fs = require('fs-extra');
-const path = require('path');
 
 module.exports = {
   config: {
     name: 'rizz',
-    version: '1.5',
-    author: 'DAINSLEIF',
+    version: '2.0',
+    author: 'kshitiz',
     countDown: 8,
     role: 0,
     category: 'fun',
@@ -14,10 +12,10 @@ module.exports = {
       en: 'Tells a random rizz.'
     },
     longDescription: {
-      en: 'Tells a random pickup line fetched from a pickup line API and sends it with an image.'
+      en: 'Tells a random rizz line fetched from a rizz line API.'
     },
     guide: {
-      en: '{pn}'
+      en: '{pn} rizz'
     }
   },
   onStart: async function ({ api, event }) {
@@ -30,27 +28,26 @@ module.exports = {
 
       const pickupline = response.data.pickup;
 
-      const res = await axios.get('https://koree-antonio-api.dreamcorps.repl.co/random-image', { responseType: 'arraybuffer' });
-      const imgPath = path.join(__dirname, 'cache', `random-koree.jpg`);
-      await fs.outputFile(imgPath, res.data);
-
       const message = `${pickupline}`;
 
       const attachment = await api.sendMessage({
         body: message,
-        attachment: fs.createReadStream(imgPath),
+        mentions: [{
+          tag: event.senderID,
+          id: event.senderID,
+          fromIndex: message.indexOf(message),
+          toIndex: message.length
+        }],
       }, event.threadID);
 
       if (!attachment || !attachment.messageID) {
-        throw new Error('Failed to send message with pickup line and image');
+        throw new Error('Failed to send message with rizz line');
       }
 
-      console.log(`Sent pickup line with image with message ID ${attachment.messageID}`);
-
-      await fs.remove(imgPath);
+      console.log(`Sent pickup line as a reply with message ID ${attachment.messageID}`);
     } catch (error) {
-      console.error(`Failed to send pickup line with image: ${error.message}`);
-      api.sendMessage('Sorry, something went wrong while trying to tell a pickup line with an image. Please try again later.', event.threadID);
+      console.error(`Failed to send pickup line : ${error.message}`);
+      api.sendMessage('Sorry, something went wrong while trying to tell a rizz line. Please try again later.', event.threadID);
     }
   }
 };
